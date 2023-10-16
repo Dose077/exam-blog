@@ -1,0 +1,37 @@
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 61vh;
+}
+.title{
+margin: 58px 0;
+width: 557px;
+color: #232536;
+text-align: center;
+font-family: Sen;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 64px; /* 133.333% */
+letter-spacing: -2px;
+}
+input{
+    border: 1px solid #232536;
+    margin-top: 19px;
+    width: 768px;
+    padding: 24px;
+    gap: 10px;
+}
+.btn{
+    margin-top: 64px;
+    width: 768px;
+    height: 64px;
+    background: var(--Yellow, #FFD050);
+    color: var(--Black, #232536);
+    font-family: Sen;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+}

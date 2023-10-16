@@ -1,0 +1,28 @@
+import { Fragment, createContext, useState } from "react"
+import PropTypes  from "prop-types"
+import {  TOKEN } from "../constants"
+import Cookies from "js-cookie"
+
+export const AuthContext = createContext()
+
+
+const AuthContextProvider = ({ children }) => {
+
+const [ isAuthenticated, setIsAuthenticated ] = useState( Boolean(Cookies.get(TOKEN)) )
+  
+  const state = { isAuthenticated,  setIsAuthenticated,  }
+  
+  return (
+    <Fragment >
+      <AuthContext.Provider value={state} >
+        { children }
+      </AuthContext.Provider>
+    </Fragment>
+  )
+}
+
+AuthContextProvider.propTypes = {
+  children: PropTypes.node,
+}
+
+export default AuthContextProvider;
